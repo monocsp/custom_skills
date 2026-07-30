@@ -31,6 +31,12 @@ description: >
 | `git-commit-pr` | skill | 커밋 메시지 작성, 푸시, PR 생성 |
 | `humanize-korean` | skill | AI가 쓴 한글의 "AI 티" 탐지·윤문 |
 | 에이전트 12개 | agents | 전부 `humanize-korean` 파이프라인 소속 |
+| 개발 루프 11개 | skills | `develop-looping-process` 외 — **분석 중, 전역 설치 금지** |
+| 검증자 2개 | agents | `isolated-adversarial-verifier` · `runtime-qa-verifier` |
+
+**개발 루프 파이프라인은 아직 링크 대상이 아니다.** 특정 Flutter 프로젝트에 결합돼
+있어 전역 설치하면 무관한 작업에서 발동한다. 구조를 물으면
+`skills/develop-looping-process/references/loop-overview.md` 로 안내한다.
 
 `~/.claude` 에는 이 레포가 관리하지 않는 스킬도 함께 있다(`skill-creator`, `md-to-pdf`,
 `orca-cli` 등). 링크가 아니라 실체이거나 다른 저장소를 가리키는 항목이며,
