@@ -1,0 +1,19 @@
+# install.sh 가 ~/.claude 로 링크하지 않을 항목. 한 줄에 하나, # 은 주석.
+# 저장소에는 두되 전역 설치는 하지 않을 것을 여기 적는다.
+#
+# 개발 루프 파이프라인 — 특정 Flutter 프로젝트에 결합돼 있어(경로·브랜치명·게이트 명령)
+# 전역 설치하면 무관한 작업에서 발동한다. 결합 해소 전까지 분석 대상으로만 둔다.
+# 근거: skills/develop-looping-process/references/findings-2026-07-30.md (F-3)
+develop-looping-process
+feature-plan
+feature-implement
+feature-runtime-qa
+feature-scenario-audit
+feature-gap-fix
+designer-handoff-report
+visual-verify
+pr
+figma-sync
+ga4-instrument
+isolated-adversarial-verifier.md
+runtime-qa-verifier.md

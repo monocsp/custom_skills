@@ -34,6 +34,20 @@ done
 say() { printf '%s\n' "$*"; }
 run() { if [ "$DRY_RUN" -eq 1 ]; then say "      [dry-run] $*"; else "$@"; fi; }
 
+# .installignore 에 적힌 이름은 링크하지 않는다. 저장소에는 두되 전역 설치는 막을 때 쓴다.
+IGNORE_FILE="$REPO/.installignore"
+is_ignored() {
+  [ -f "$IGNORE_FILE" ] || return 1
+  local name="$1" line
+  while IFS= read -r line || [ -n "$line" ]; do
+    line="${line%%#*}"                    # 주석 제거
+    line="$(printf '%s' "$line" | tr -d '[:space:]')"
+    [ -n "$line" ] || continue
+    [ "$line" = "$name" ] && return 0
+  done < "$IGNORE_FILE"
+  return 1
+}
+
 # $1=저장소 항목 절대경로  $2=링크로 만들 대상 경로
 link_one() {
   local src="$1" dest="$2" name; name="$(basename "$dest")"
@@ -91,12 +105,19 @@ sync_dir() {
   [ -d "$src_dir" ] || return 0
 
   local -a items=()
-  local src
+  local -a skipped=()
+  local src name
   for src in "$src_dir"/$pattern; do
     [ -e "$src" ] || continue
-    case "$(basename "$src")" in .gitkeep|.DS_Store) continue ;; esac
+    name="$(basename "$src")"
+    case "$name" in .gitkeep|.DS_Store) continue ;; esac
+    if is_ignored "$name"; then skipped+=("$name"); continue; fi
     items+=("$src")
   done
+
+  if [ "${#skipped[@]}" -gt 0 ] && [ "$UNINSTALL" -eq 0 ]; then
+    say "$sub/ — .installignore 로 제외 ${#skipped[@]}건: ${skipped[*]}"
+  fi
 
   if [ "${#items[@]}" -eq 0 ]; then
     say "$sub/ — 항목 없음, 건너뜀"
