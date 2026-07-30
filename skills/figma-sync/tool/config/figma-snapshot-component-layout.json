@@ -1,0 +1,55 @@
+{
+  "slug": "component-layout",
+  "_unfrozen": "2026-06-30: 헤더/앱바 재작업 완료 확인(__TEMP_HEADER4_TEST__ 삭제됨 + App Bar/Center 정위치 = 4636:2). headerHome.statusBar 4545:9001→4712:1803 갱신 후 freeze 해제·재동기. DS 감사 P1.",
+  "description": "DML Design System — ③ Component / 1 Layout 섹션 (Status Bar·Home bar·App bar·Header/Home·home ui·Divider)",
+  "screens": {
+    "statusBar": {
+      "rootNodeId": "4032:6047",
+      "elements": {
+        "container": "4032:6047",
+        "time": "4032:6067"
+      }
+    },
+    "homeBar": {
+      "rootNodeId": "4032:6081",
+      "elements": {
+        "container": "4032:6081",
+        "bar": "4032:6082"
+      }
+    },
+    "appBar": {
+      "rootNodeId": "4060:10473",
+      "elements": {
+        "container": "4060:10473",
+        "title": "4060:10436",
+        "actionText": "4060:10456",
+        "leadingIcon": "4060:10432"
+      }
+    },
+    "headerHome": {
+      "rootNodeId": "4545:9039",
+      "elements": {
+        "container": "4545:9039",
+        "statusBar": "4712:1803",
+        "homeUi": "4545:8985"
+      }
+    },
+    "homeUi": {
+      "rootNodeId": "4544:969",
+      "elements": {
+        "container": "4544:969",
+        "dateDay": "4544:972",
+        "dateWeekday": "4544:973",
+        "text": "4544:974",
+        "iconButton": "4545:8888"
+      }
+    },
+    "divider": {
+      "rootNodeId": "4032:6096",
+      "elements": {
+        "normal": "4032:6097",
+        "thick": "4032:6098"
+      }
+    }
+  }
+}

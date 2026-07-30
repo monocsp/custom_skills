@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "item": { "type": "string", "description": "검증한 체크리스트 항목 key" },
+    "verdict": { "type": "string", "enum": ["pass", "fail", "uncertain"] },
+    "confidence": { "type": "string", "enum": ["high", "medium", "low"] },
+    "evidence": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "file:line + 실제 값 vs SSOT 비교 / 테스트 어서션 인용 등 구체 근거"
+    },
+    "mutationProof": {
+      "type": "string",
+      "description": "회귀테스트가 load-bearing 임을 입증한 변이 실험 결과(예: '160→400 변이 시 테스트 FAIL 확인'). 안 했으면 'N/A'."
+    },
+    "visualObservation": {
+      "type": "string",
+      "description": "시각 항목이면 골든/이미지에서 관찰한 것. 비시각이면 'N/A'."
+    },
+    "gap": {
+      "type": "string",
+      "description": "fail/uncertain 이면 무엇이 미충족이고 어떻게 고칠지. pass 면 ''."
+    }
+  },
+  "required": ["item", "verdict", "confidence", "evidence", "mutationProof", "visualObservation", "gap"]
+}

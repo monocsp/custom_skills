@@ -1,0 +1,97 @@
+{
+  "slug": "component-action",
+  "description": "DML Design System — ③ Component / 2 Action 섹션 (button/bottom·bottom-area·button/compact·button/dialog·Button/Icon)",
+  "screens": {
+    "buttonBottomFull": {
+      "rootNodeId": "4032:6933",
+      "elements": {
+        "container": "4032:6934",
+        "label": "4032:6935"
+      }
+    },
+    "buttonBottomFullDisabled": {
+      "rootNodeId": "4032:6943",
+      "elements": {
+        "container": "4032:6944",
+        "label": "4032:6945"
+      }
+    },
+    "buttonBottomFullLoading": {
+      "rootNodeId": "4032:6936",
+      "elements": {
+        "container": "4032:6937",
+        "label": "4032:6938",
+        "loadingDots": "4032:6939",
+        "dot": "4032:6940"
+      }
+    },
+    "buttonBottomPair": {
+      "rootNodeId": "4043:947",
+      "elements": {
+        "container": "4043:947",
+        "btn1": "4043:948",
+        "btn1Label": "4043:949",
+        "btn2": "4043:950",
+        "btn2Label": "4043:951"
+      }
+    },
+    "bottomArea": {
+      "rootNodeId": "4044:905",
+      "elements": {
+        "container": "4044:906",
+        "bottom": "4043:1000"
+      }
+    },
+    "bottomAreaTall": {
+      "rootNodeId": "4060:1300",
+      "elements": {
+        "container": "4060:1301",
+        "bottom": "4060:1303"
+      }
+    },
+    "buttonCompact": {
+      "rootNodeId": "4065:985",
+      "elements": {
+        "container": "4065:985",
+        "icon": "4060:1249",
+        "label": "4043:1744"
+      }
+    },
+    "buttonDialog": {
+      "rootNodeId": "4032:6967",
+      "elements": {
+        "container": "4032:6968",
+        "label": "4032:6969"
+      }
+    },
+    "buttonDialogDisabled": {
+      "rootNodeId": "4032:6970",
+      "elements": {
+        "container": "4032:6971",
+        "label": "4032:6972"
+      }
+    },
+    "iconButton": {
+      "rootNodeId": "4060:1185",
+      "elements": {
+        "container": "4060:1185",
+        "icon": "4060:1186"
+      }
+    },
+    "iconButtonDisabled": {
+      "rootNodeId": "4555:2",
+      "elements": {
+        "container": "4555:2",
+        "icon": "4555:3"
+      }
+    },
+    "iconButtonBackground": {
+      "rootNodeId": "4545:8604",
+      "elements": {
+        "container": "4545:8604",
+        "ellipse": "4545:8602",
+        "icon": "4545:8496"
+      }
+    }
+  }
+}

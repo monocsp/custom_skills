@@ -1,0 +1,9 @@
+name: figma_sync_tool
+description: Figma API로 디자인 실측값을 추출해 design_system 토큰으로 고정하는 skill 내장 도구 (dolomoodProto figma_extractor 이식)
+version: 0.1.0
+publish_to: none
+
+# 자체 pubspec 을 둬서 별도 패키지로 격리 — 앱 빌드/analyze/custom_lint 에 잡히지 않는다.
+# 외부 의존성 0개 (dart:io / dart:convert 만 사용).
+environment:
+  sdk: ^3.11.0

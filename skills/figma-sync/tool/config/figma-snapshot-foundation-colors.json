@@ -1,0 +1,125 @@
+{
+  "slug": "foundation-colors",
+  "description": "DML Foundation > Color — Primitive(Dolo/Pink/Neutral) + Alias Token(brand/bg/text/stroke/icon/semantic/overlay) 스와치 + 퍼블리시 Shadow/drop-shadow EFFECT 소스",
+  "screens": {
+    "dolo": {
+      "rootNodeId": "2176:1218",
+      "elements": {
+        "dol300": "2176:1262",
+        "dol200": "2176:1270",
+        "dol100": "2176:1286"
+      }
+    },
+    "pink": {
+      "rootNodeId": "4001:34",
+      "elements": {
+        "pink500": "4001:46",
+        "pink400": "4001:54",
+        "pink300": "4001:62",
+        "pink200": "4001:70",
+        "pink100": "4001:78"
+      }
+    },
+    "neutral": {
+      "rootNodeId": "2176:1304",
+      "elements": {
+        "neutral1000": "2176:1324",
+        "neutral900": "2176:1332",
+        "neutral800": "2176:1340",
+        "neutral700": "2176:1348",
+        "neutral600": "2176:1356",
+        "neutral500": "2176:1364",
+        "neutral400": "2176:1372",
+        "neutral300": "2176:1380",
+        "neutral200": "2176:1388",
+        "neutral100": "2176:1396",
+        "neutral0": "2176:1404"
+      }
+    },
+    "brand": {
+      "rootNodeId": "2176:1409",
+      "elements": {
+        "primary": "2176:1422",
+        "primaryDark": "2246:23",
+        "secondary": "4001:27",
+        "secondaryDark": "4001:31"
+      }
+    },
+    "background": {
+      "rootNodeId": "2176:1464",
+      "elements": {
+        "bg1": "2176:1477",
+        "bg1Dark": "2176:1481",
+        "bg2": "2176:1489",
+        "bg2Dark": "2176:1493",
+        "bg3": "2176:1501",
+        "bg3Dark": "2176:1505",
+        "bgSub": "2207:29",
+        "bgSubDark": "2207:33"
+      }
+    },
+    "text": {
+      "rootNodeId": "2176:1519",
+      "elements": {
+        "text1": "2176:1532",
+        "text1Dark": "2176:1536",
+        "text2": "2176:1544",
+        "text2Dark": "2176:1548",
+        "text3": "2176:1556",
+        "text3Dark": "2176:1560",
+        "text4": "2176:1568",
+        "text4Dark": "2176:1572",
+        "text5": "2176:1580",
+        "text5Dark": "2176:1584"
+      }
+    },
+    "stroke": {
+      "rootNodeId": "2176:1610",
+      "elements": {
+        "stroke1": "2176:1623",
+        "stroke1Dark": "2176:1627",
+        "stroke2": "2270:27",
+        "stroke2Dark": "2270:31",
+        "stroke3": "2307:27",
+        "stroke3Dark": "2307:31",
+        "stroke4": "2295:27",
+        "stroke4Dark": "2295:31"
+      }
+    },
+    "icon": {
+      "rootNodeId": "2176:1641",
+      "elements": {
+        "icon": "2176:1654",
+        "iconDark": "2176:1658",
+        "iconColor": "2176:1666",
+        "iconColorDark": "2246:28",
+        "iconDisabled": "2176:1678",
+        "iconDisabledDark": "2176:1682",
+        "iconW": "2176:1690",
+        "iconWDark": "2176:1694"
+      }
+    },
+    "semantic": {
+      "rootNodeId": "2176:1696",
+      "elements": {
+        "success": "2176:1709",
+        "successDark": "2176:1713",
+        "error": "2176:1733",
+        "errorDark": "2176:1737"
+      }
+    },
+    "overlay": {
+      "rootNodeId": "2259:334",
+      "elements": {
+        "dim": "2259:347",
+        "dimDark": "2259:351"
+      }
+    },
+    "effect": {
+      "rootNodeId": "2300:21",
+      "elements": {
+        "dropShadow": "2300:21"
+      }
+    }
+  }
+}

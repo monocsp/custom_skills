@@ -1,0 +1,4 @@
+# figma-sync 스킬 로컬 시크릿 — FIGMA_TOKEN(PAT) 은 절대 커밋 금지.
+# 이 패턴은 figma-sync/ 와 그 하위(tool/ 포함) 어디에 둔 .env 든 추적에서 제외한다.
+.env
+.env.*

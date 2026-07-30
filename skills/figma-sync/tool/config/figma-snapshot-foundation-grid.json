@@ -1,0 +1,12 @@
+{
+  "slug": "foundation-grid",
+  "description": "DML Foundation > Grid — Layout 프레임 + 퍼블리시 GRID 스타일 Grid/Mobile 소스 노드",
+  "screens": {
+    "layout": {
+      "rootNodeId": "4032:2546",
+      "elements": {
+        "gridMobile": "4031:2"
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "slug": "component-feedback",
+  "description": "DML Design System — ③ Component / 7 Feedback 섹션 (Toast·Snackbar)",
+  "screens": {
+    "toast": {
+      "rootNodeId": "4032:6509",
+      "elements": {
+        "container": "4032:6509",
+        "icon": "4032:6510",
+        "label": "4032:6511"
+      }
+    },
+    "snackbar": {
+      "rootNodeId": "4032:6539",
+      "elements": {
+        "container": "4032:6539",
+        "image": "4887:7268",
+        "label": "4887:7269",
+        "chevron": "4032:6542",
+        "actionLabel": "4032:6543"
+      }
+    },
+    "snackbarImage": {
+      "rootNodeId": "4032:6544",
+      "elements": {
+        "container": "4032:6544",
+        "image": "4032:6545",
+        "label": "4032:6546"
+      }
+    }
+  }
+}

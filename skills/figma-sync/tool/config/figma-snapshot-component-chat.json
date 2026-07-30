@@ -1,0 +1,91 @@
+{
+  "slug": "component-chat",
+  "description": "감정대화 채팅 입력 컴포넌트 — Bottom-sheet_Chat/Emotion·textfield·Button-send·size (파일 6AjPJmkoDHz7TWQ0tvcHgL, FIGMA_FILE_KEY env 오버라이드로 실행)",
+  "screens": {
+    "chatSheetHorizontal": {
+      "rootNodeId": "1990:59264",
+      "elements": {
+        "container": "1990:59264",
+        "prevButton": "1990:59267",
+        "prevChevron": "1990:59268",
+        "prevLabel": "1990:59269",
+        "sizeIcon": "1990:59270",
+        "optionChip": "1990:59272",
+        "moreChip": "1990:59281",
+        "moreLabel": "1990:59283",
+        "moreChevron": "1990:59284",
+        "divider": "1990:59288",
+        "textfieldRow": "1990:59289"
+      }
+    },
+    "chatSheetVertical": {
+      "rootNodeId": "1990:59504",
+      "elements": {
+        "container": "1990:59504"
+      }
+    },
+    "chatSheetTextfieldInactive": {
+      "rootNodeId": "1990:58409",
+      "elements": {
+        "container": "1990:58409",
+        "prevButton": "1990:58412",
+        "prevLabel": "1990:58414",
+        "sizeIcon": "1990:58415"
+      }
+    },
+    "chatSheetTextfieldActive": {
+      "rootNodeId": "1990:58472",
+      "elements": {
+        "container": "1990:58472"
+      }
+    },
+    "chatEmotionSelected": {
+      "rootNodeId": "2032:76166",
+      "elements": {
+        "container": "2032:76166",
+        "chipSelected": "2032:79446",
+        "caption": "2032:76215",
+        "tagChip": "2032:76381",
+        "tagLabel": "2032:76382",
+        "tagClose": "2032:76383",
+        "textfieldRow": "2032:76391"
+      }
+    },
+    "chatTextfieldEnable": {
+      "rootNodeId": "1990:56096",
+      "elements": {
+        "container": "1990:56096"
+      }
+    },
+    "chatTextfieldFull": {
+      "rootNodeId": "1990:58597",
+      "elements": {
+        "container": "1990:58597"
+      }
+    },
+    "chatSendEnable": {
+      "rootNodeId": "1950:50129",
+      "elements": {
+        "container": "1950:50129"
+      }
+    },
+    "chatSendDisabled": {
+      "rootNodeId": "1950:50101",
+      "elements": {
+        "container": "1950:50101"
+      }
+    },
+    "chatExpandIcon": {
+      "rootNodeId": "1990:55778",
+      "elements": {
+        "container": "1990:55778"
+      }
+    },
+    "chatCollapseIcon": {
+      "rootNodeId": "1990:55780",
+      "elements": {
+        "container": "1990:55780"
+      }
+    }
+  }
+}

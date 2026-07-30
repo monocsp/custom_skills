@@ -1,0 +1,25 @@
+{
+  "slug": "mood-gradients",
+  "description": "DML 무드 그라디언트 14종 — 7가지 기분 x 2변형(라이트/관심전) FILL 스타일",
+  "screens": {
+    "moods": {
+      "rootNodeId": "2176:1213",
+      "elements": {
+        "veryBadLight": "2242:22",
+        "veryBadPreAttention": "4305:5868",
+        "badLight": "2230:31",
+        "badPreAttention": "4305:5870",
+        "slightlyBadLight": "2230:32",
+        "slightlyBadPreAttention": "4305:5869",
+        "neutralLight": "2230:33",
+        "neutralPreAttention": "4305:5882",
+        "slightlyGoodLight": "2230:34",
+        "slightlyGoodPreAttention": "4305:5885",
+        "goodLight": "2230:35",
+        "goodPreAttention": "4305:5886",
+        "veryGoodLight": "2230:36",
+        "veryGoodPreAttention": "4305:5887"
+      }
+    }
+  }
+}

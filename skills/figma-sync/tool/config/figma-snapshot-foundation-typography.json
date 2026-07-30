@@ -1,0 +1,24 @@
+{
+  "slug": "foundation-typography",
+  "description": "DML Design System — 타이포그래피 13종 (Typography SECTION 내 TEXT 스타일 노드)",
+  "screens": {
+    "styles": {
+      "rootNodeId": "4007:20",
+      "elements": {
+        "display": "4027:2",
+        "title1": "4027:3",
+        "title2": "4027:4",
+        "title3": "4027:5",
+        "body1": "4027:6",
+        "body2": "4027:7",
+        "captionL": "4027:8",
+        "captionM": "4027:9",
+        "button1": "4027:10",
+        "button2": "4027:11",
+        "content1": "4060:10363",
+        "content2": "4060:10364",
+        "content3": "4060:10365"
+      }
+    }
+  }
+}

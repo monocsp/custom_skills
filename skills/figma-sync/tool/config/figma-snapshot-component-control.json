@@ -1,0 +1,20 @@
+{
+  "slug": "component-control",
+  "description": "DML Design System — ③ Component / Control 섹션 (toggle/switch). 토글 원본은 BGM 부품 파일(6AjPJmkoDHz7TWQ0tvcHgL) 소속이라 action 슬러그(다른 파일)와 분리한다 — dolo-toggle.md §3.1-4.",
+  "screens": {
+    "toggleOff": {
+      "rootNodeId": "1054:39870",
+      "elements": {
+        "track": "1026:111102",
+        "knob": "I1026:111102;4051:1356"
+      }
+    },
+    "toggleOn": {
+      "rootNodeId": "1054:39871",
+      "elements": {
+        "track": "1026:111052",
+        "knob": "I1026:111052;4051:1360"
+      }
+    }
+  }
+}

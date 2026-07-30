@@ -1,0 +1,46 @@
+{
+  "slug": "component-navigation",
+  "description": "DML Design System — ③ Component / 6 Navigation 섹션 ([v.0.8] bottom-navigation-bar·tab-button·icon+text·tab-log)",
+  "screens": {
+    "bottomNavBar": {
+      "rootNodeId": "4032:6751",
+      "elements": {
+        "container": "4032:6751",
+        "background": "4032:6752",
+        "tabs": "4032:6753",
+        "tabButton": "4032:6754"
+      }
+    },
+    "bottomNavBarIndicator": {
+      "rootNodeId": "4032:6856",
+      "elements": {
+        "container": "4032:6856",
+        "homeIndicator": "4032:6859"
+      }
+    },
+    "tabButton": {
+      "rootNodeId": "4032:6892",
+      "elements": {
+        "defaultState": "4032:6892",
+        "focusedState": "4032:6894"
+      }
+    },
+    "tabItem": {
+      "rootNodeId": "4032:6864",
+      "elements": {
+        "container": "4032:6864",
+        "icon": "4032:6865",
+        "label": "4032:6866",
+        "focused": "4032:6867",
+        "focusedLabel": "4032:6869"
+      }
+    },
+    "tabLog": {
+      "rootNodeId": "4032:6916",
+      "elements": {
+        "container": "4032:6916",
+        "button": "4032:6917"
+      }
+    }
+  }
+}

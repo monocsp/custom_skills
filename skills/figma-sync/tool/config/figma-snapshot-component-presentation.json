@@ -1,0 +1,85 @@
+{
+  "slug": "component-presentation",
+  "_note": "2026-06-30 DS 감사: speechBubble/speechBubble2 가 Figma 에서 삭제·bubble 하나로 통합(node 4212:891·4292:3142 삭제) → config·위젯·스펙·테스트 제거. alertDialog elements·bottomSheet 는 신 node id 로 갱신(4901:148xx / 4894:4).",
+  "description": "DML Design System — ③ Component / 8 Presentation 섹션 (Tooltip·Basic dialog·Alert dialog·Bottom sheet) + 콘텐츠 말풍선 bubble",
+  "screens": {
+    "tooltipMedium": {
+      "rootNodeId": "4032:6214",
+      "elements": {
+        "container": "4032:6214",
+        "body": "4032:6217",
+        "background": "4032:6219",
+        "content": "4032:6220",
+        "label": "4032:6221",
+        "arrow": "4032:6216"
+      }
+    },
+    "tooltipSmall": {
+      "rootNodeId": "4032:6249",
+      "elements": {
+        "body": "4032:6252",
+        "background": "4032:6254",
+        "content": "4032:6255",
+        "label": "4032:6256",
+        "arrow": "4032:6251"
+      }
+    },
+    "tooltipMediumLight": {
+      "rootNodeId": "4032:6294",
+      "elements": {
+        "container": "4032:6294",
+        "body": "4032:6297",
+        "background": "4032:6299",
+        "content": "4032:6300",
+        "label": "4032:6301",
+        "arrow": "4032:6296"
+      }
+    },
+    "tooltipSmallLight": {
+      "rootNodeId": "4032:6330",
+      "elements": {
+        "body": "4032:6333",
+        "background": "4032:6335",
+        "content": "4032:6336",
+        "label": "4032:6337",
+        "arrow": "4032:6332"
+      }
+    },
+    "basicDialog": {
+      "rootNodeId": "4032:6432",
+      "elements": {
+        "container": "4032:6432",
+        "modal": "4032:6433",
+        "bottomArea": "4032:6434",
+        "closeText": "4032:6435"
+      }
+    },
+    "alertDialog": {
+      "rootNodeId": "4032:6441",
+      "elements": {
+        "container": "4032:6441",
+        "title": "4901:14820",
+        "body": "4901:14821",
+        "bottomArea": "4901:14960"
+      }
+    },
+    "bottomSheet": {
+      "rootNodeId": "4894:4",
+      "elements": {
+        "container": "4894:4",
+        "dragHandle": "4892:8881",
+        "header": "4892:8568",
+        "content": "4892:8571"
+      }
+    },
+    "bubble": {
+      "rootNodeId": "4544:978",
+      "elements": {
+        "container": "4544:979",
+        "text": "4544:980",
+        "emoji": "4544:981",
+        "arrow": "4544:982"
+      }
+    }
+  }
+}
