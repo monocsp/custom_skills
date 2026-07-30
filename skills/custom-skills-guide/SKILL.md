@@ -29,6 +29,12 @@ description: >
 | --- | --- | --- |
 | `custom-skills-guide` | skill | 이 레포 자체에 대한 메타 질문 |
 | `git-commit-pr` | skill | 커밋 메시지 작성, 푸시, PR 생성 |
+| `humanize-korean` | skill | AI가 쓴 한글의 "AI 티" 탐지·윤문 |
+| 에이전트 12개 | agents | 전부 `humanize-korean` 파이프라인 소속 |
+
+`~/.claude` 에는 이 레포가 관리하지 않는 스킬도 함께 있다(`skill-creator`, `md-to-pdf`,
+`orca-cli` 등). 링크가 아니라 실체이거나 다른 저장소를 가리키는 항목이며,
+`install.sh --uninstall` 은 그것들을 건드리지 않는다.
 
 > 스킬을 추가하면 이 표와 `README.md` 목차를 **같이** 갱신한다.
 
