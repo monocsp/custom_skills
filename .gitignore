@@ -1,0 +1,18 @@
+# 로컬 전용 프롬프트/설정 (커밋 금지)
+CLAUDE.local.md
+**/CLAUDE.local.md
+.claude/settings.local.json
+.claude/*.local.md
+.claude/commands/*.local.md
+
+# OS / 에디터
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# 기타
+*.log
+.env
+.env.*
+!.env.example
