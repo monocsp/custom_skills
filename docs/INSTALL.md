@@ -66,7 +66,15 @@ test -f "$HOME/.claude/skills/$skill_name/SKILL.md"
 readlink "$HOME/.claude/skills/$skill_name"
 ```
 
-`test` 명령이 출력 없이 종료 코드 0을 반환하고, `readlink` 결과가 이 저장소의 해당 경로이면 정상이다. 마지막으로 Claude Code를 새로 시작한 뒤 대표 트리거 문구로 스킬이 발동하는지 확인한다. Claude Code가 실행 중 변경 사항을 즉시 다시 읽는지는 버전에 따라 다를 수 있으므로 **확인 필요**이며, 검증 시에는 재시작을 기본으로 한다.
+`test` 명령이 출력 없이 종료 코드 0을 반환하고, `readlink` 결과가 이 저장소의 해당 경로이면 정상이다. 마지막으로 대표 트리거 문구로 스킬이 발동하는지 확인한다.
+
+링크를 건 직후 **실행 중이던 세션에서 곧바로 스킬이 인식되는 것을 확인했다**(2026-07-30, Claude Code / macOS). 재시작이 항상 필요하지는 않다. 다만 인식 시점이 버전과 상황에 따라 다를 수 있으므로, 발동하지 않을 때는 세션을 새로 시작해 한 번 더 확인한 뒤 다른 원인을 찾는다.
+
+스킬에 `scripts/`가 있다면 링크 경로로도 실행되는지 확인한다. 저장소 원본이 아니라 `~/.claude/` 링크를 통해 실행해야 실제 사용 경로를 검증하는 것이다.
+
+```bash
+python3 ~/.claude/skills/<name>/scripts/<script>.py --help
+```
 
 ## 같은 이름의 실체 폴더 마이그레이션
 
@@ -94,10 +102,16 @@ test ! -e "$repo_path"
 
 백업 경로를 만든 뒤 같은 이름의 백업이 없는지 검사하고 이동한다.
 
+백업은 `~/.claude/skills/` 안에 이름을 바꿔 두지 않고 **전용 백업 디렉터리**로 옮긴다.
+백업물이 스킬 디렉터리에 남아 있으면 목록을 읽을 때 계속 눈에 걸리고, 나중에
+이게 백업인지 실제 스킬인지 헷갈리기 때문이다.
+
 ```bash
 backup_stamp="$(date +%Y%m%d-%H%M%S)"
-backup_path="$HOME/.claude/skills/${skill_name}.backup-${backup_stamp}"
+backup_root="$HOME/.claude/.custom_skills_backup/$backup_stamp"
+backup_path="$backup_root/skills/$skill_name"
 
+mkdir -p "$backup_root/skills"
 test ! -e "$backup_path"
 mv "$source_path" "$backup_path"
 ```
@@ -137,7 +151,27 @@ readlink "$HOME/.claude/skills/$skill_name"
 
 링크가 저장소의 `skills/<name>`을 가리키고 Claude Code에서 정상 동작하는 것을 확인한 뒤에도 백업은 즉시 삭제하지 않는다. 충분히 사용해 데이터가 온전함을 확인한 후 사용자가 직접 보관 또는 삭제를 결정한다.
 
-같은 충돌이 `agents/<name>.md`나 `commands/<name>.md` 실체 파일에서 발생하면 동일한 원칙을 적용한다. 먼저 이름에 타임스탬프를 붙여 백업하고, 저장소의 해당 디렉터리로 복제해 내용을 비교한 다음 링크를 설치한다.
+### 5. 여러 항목을 한꺼번에 옮길 때
+
+`agents/*.md`처럼 파일이 여러 개면 같은 백업 디렉터리 아래에 모아 옮긴 뒤 한 번에 비교한다.
+심볼릭 링크는 다른 곳이 관리하는 항목이므로 건너뛴다.
+
+```bash
+mkdir -p "$backup_root/agents"
+for f in "$HOME"/.claude/agents/*.md; do
+  [ -L "$f" ] && continue          # 다른 저장소가 관리하는 링크는 건드리지 않는다
+  mv "$f" "$backup_root/agents/"
+done
+
+cp -a "$backup_root/agents/." "$repo_root/agents/"
+diff -qr "$backup_root/agents" "$repo_root/agents" --exclude=.gitkeep
+```
+
+`humanize-korean` 스킬과 그 서브에이전트 12개를 이 절차로 이관했고, `diff -qr`에서
+차이가 없음을 확인한 뒤 링크를 설치했다. 실제 사례는 `docs/CONVENTIONS.md`의
+체크리스트와 함께 참고한다.
+
+`commands/<name>.md`도 같은 원칙을 적용한다.
 
 ## 해제
 
