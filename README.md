@@ -27,7 +27,7 @@
 | --- | --- |
 | [전체 개관](skills/develop-looping-process/references/loop-overview.md) | 7단계 흐름, 상태 모델, STOP 조건, 루프백, 완료 판정 |
 | [개발·QA 모델](skills/develop-looping-process/references/dev-and-qa-model.md) | 레이어 규칙, TDD, key-first, 4중 QA 검증, 적대 다수결 |
-| [1차 분석](skills/develop-looping-process/references/findings-2026-07-30.md) | 확인된 결함 6건과 개선 후보 우선순위 |
+| [분석과 실측](skills/develop-looping-process/references/findings-2026-07-30.md) | 실제 상태 파일 계측 결과, 결함 11건, 개선 우선순위 |
 
 | Phase | 이름 | 하는 일 |
 | --- | --- | --- |
